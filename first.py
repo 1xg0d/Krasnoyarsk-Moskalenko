@@ -19,7 +19,6 @@ class Example(QWidget):
     def haha(self):
         self.status = 1
         self.update()
-        
 
     def paintEvent(self, event):
         self.qp = QPainter()
@@ -28,11 +27,12 @@ class Example(QWidget):
         self.qp.end()
 
     def draw(self):
-        self.qp.setBrush(QColor('yellow'))
+        self.qp.setBrush(QColor(random.randint(0, 255),
+                                random.randint(0, 255), random.randint(0, 255)))
         if self.status == 1:
-            self.qp.drawEllipse(random.randint(10, 100), random.randint(10, 100), random.randint(10, 100), random.randint(10, 100))
+            self.qp.drawEllipse(random.randint(10, 200), random.randint(
+                10, 200), random.randint(10, 200), random.randint(10, 200))
         self.status = 0
-
 
     def initUI(self):
         self.setGeometry(300, 300, 300, 300)

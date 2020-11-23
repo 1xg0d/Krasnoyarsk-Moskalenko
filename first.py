@@ -6,7 +6,6 @@ from PyQt5.QtWidgets import QWidget, QApplication, QLabel, QPushButton
 from PyQt5.QtGui import QPainter, QColor
 
 
-
 class Example(QWidget):
     def __init__(self):
         super().__init__()
@@ -33,7 +32,6 @@ class Example(QWidget):
         if self.status == 1:
             self.qp.drawEllipse(random.randint(10, 100), random.randint(10, 100), random.randint(10, 100), random.randint(10, 100))
         self.status = 0
-
 
 
     def initUI(self):
